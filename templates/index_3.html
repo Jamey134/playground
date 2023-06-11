@@ -6,7 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground</title>
 </head>
-<body>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
     
+    body {
+        align-items: center;
+        width: auto;
+        display: inline-block;
+        border: 3px solid blue;
+    }
+
+    .box_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-content: center;
+        margin: 50px;
+        height: 600px;
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .box {
+        
+        height: 250px;
+        width: 250px;
+        border: 2px solid black;
+        border-radius: 10%;
+        margin: 20px;
+        background-color: {{color}};
+    }
+</style>
+<body>
+    <h1>Welcome</h1>
+    <div class="box_container">
+        {% for i in range (x): %}
+        <div class="box"></div>
+        {% endfor %}
+    </div>
 </body>
 </html>
